@@ -20,10 +20,11 @@ import com.gym.howtofit.security.ClientType;
 import com.gym.howtofit.security.LoginManager;
 import com.gym.howtofit.service.AdminService;
 import com.gym.howtofit.service.UserService;
+import com.gym.howtofit.utils.Env;
 
 @RestController
 @RequestMapping("user")
-@CrossOrigin(value = "http://localhost:4200", allowedHeaders = "*")
+@CrossOrigin(origins = Env.URL, allowedHeaders = "*")
 public class UserController extends ClientController {
 	@Autowired
 	private UserService userService;
